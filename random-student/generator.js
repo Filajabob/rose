@@ -2,6 +2,7 @@ const STUDENTS = ["Elliot", "Saad", "Aisha", "Lana", "Lamees", "Raber", "Spencer
                     "Tanmeet", "Milix", "Muhammad", "Malik", "Vissar", "Phosa", "Daryn", "Sam", "Turner", "Bushra",
                     "Huda", "Nosa", "Emama", "Jackson", "Maryam", "Sabiq", "Ky", "Asim", "Angela", "Lucas", "Liiamm"];
 
+
 function randint(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -14,7 +15,7 @@ function choice(array) {
 }
 
 function sleep(secs) {
-    return new Promise(resolve => setTimeout(resolve, secs * 100));
+    return new Promise(resolve => setTimeout(resolve, secs * 1000));
 }
 
 function hide(element) {
@@ -25,12 +26,21 @@ function hide(element) {
       }
 }
 
-document.getElementById("generate-input").addEventListener("submit", async function(e) {
-    e.preventDefault();
+async function generate() {
     var result = document.getElementById("result");
 
     for (var i = 0; i <= 20; i++) {
-        result.innerText = choice(STUDENTS)
-        await sleep(i * 0.3)
+        result.innerText = choice(STUDENTS);
+        await sleep(i * 0.03);
     }
-})
+
+    await sleep(1)
+
+    document.body.style.backgroundColor = "rgb(2, 209, 2)";
+    document.body.style.color = "white";
+
+    await sleep(3);
+
+    document.body.style.color = "black";
+    document.body.style.backgroundColor = "white";
+}

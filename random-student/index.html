@@ -10,10 +10,12 @@
 </head>
 <body>
     <h1>Generate Student</h1>
-    <p id="result"></p>
-    <form action="generate" id="generate-input" style="text-align: center;">
-        <input type="submit" value="Generate" style="text-align: center;" id="prompt-generate">
-    </form>
+    <p id="result">Click the Button!</p>
+
+    <div id="interactions">
+        <button type="submit" id="prompt-generate" onClick="generate();">Generate</button>
+    </div>
+
     <script src="generator.js"></script>
 </body>
 </html>

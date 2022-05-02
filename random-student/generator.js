@@ -1,6 +1,6 @@
 const STUDENTS = ["Elliot", "Saad", "Aisha", "Lana", "Lamees", "Raber", "Spencer", "Xander",
-                    "Tanmeet", "Milix", "Muhammad", "Malik", "Vissar", "Phosa", "Daryn", "Sam", "Turner", "Bushra",
-                    "Huda", "Nosa", "Emama", "Jackson", "Maryam", "Sabiq", "Ky", "Asim", "Angela", "Lucas", "Liiamm"];
+                "Tanmeet", "Milix", "Muhammad", "Malik", "Vissar", "Phosa", "Daryn", "Sam", "Turner", "Bushra",
+                "Huda", "Nosa", "Emama", "Jackson", "Maryam", "Sabiq", "Ky", "Asim", "Angela", "Lucas", "Liiamm"];
 
 
 function randint(min, max) {

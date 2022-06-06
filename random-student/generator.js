@@ -1,12 +1,21 @@
-const STUDENTS = ["Elliot", "Saad", "Aisha", "Lana", "Lamees", "Raber", "Spencer", "Xander",
+var STUDENTS = ["Elliot", "Saad", "Aisha", "Lana", "Lamees", "Raber", "Spencer", "Xander",
                 "Tanmeet", "Milix", "Muhammad", "Malik", "Vissar", "Phosa", "Daryn", "Sam", "Turner", "Bushra",
                 "Huda", "Nosa", "Emama", "Jackson", "Maryam", "Sabiq", "Ky", "Asim", "Angela", "Lucas", "Liiamm"];
 
 var removeButton = document.createElement("button");
 removeButton.innerText = "Remove Student";
 removeButton.className = "fancy-button";
-removeButton.onClick = "removeStudent();";
 removeButton.style.textAlign = "center";
+
+removeButton.onclick = function() {
+    console.log("Clicked!")
+    var index = STUDENTS.indexOf(document.getElementById("result").innerText)
+
+    if (index !== -1) {
+        STUDENTS.splice(index, 1);
+    }
+};
+
 
 function randint(min, max) {
     min = Math.ceil(min);
@@ -29,14 +38,6 @@ function hide(element) {
       } else {
         element.style.display = "none";
       }
-}
-
-function removeStudent() {
-    var index = STUDENTS.indexOf(document.getElementById("result").innerText)
-
-    if (index !== -1) {
-        STUDENTS.splice(index, 1);
-    }
 }
 
 function promptRemoveStudent() {
